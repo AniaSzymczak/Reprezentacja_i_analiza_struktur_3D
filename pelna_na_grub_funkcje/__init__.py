@@ -1,3 +1,5 @@
+import os
+
 from Bio.PDB import PDBParser, PDBIO, Select
 
 class CoarseGrainSelect(Select):
@@ -21,4 +23,5 @@ class CoarseGrainSelect(Select):
 def convert_to_grub(output_file,structure):
     io = PDBIO()
     io.set_structure(structure)
+    os.chdir("Struktury")
     io.save(output_file, select=CoarseGrainSelect())
