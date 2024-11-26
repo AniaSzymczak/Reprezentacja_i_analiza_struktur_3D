@@ -1,7 +1,7 @@
 import argparse
-
 from pelna_na_grub_funkcje import convert_to_grub
 from zadanie_1_funkcje import structure_load
+
 def main(input_file,output_file):
     structure = structure_load(args.input)
     convert_to_grub(args.output, structure)
