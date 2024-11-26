@@ -3,7 +3,7 @@ from pelna_na_grub_funkcje import convert_to_grub
 from zadanie_1_funkcje import structure_load
 
 def main(input_file,output_file):
-    structure = structure_load(args.input)
+    structure = structure_load(input_file)
     convert_to_grub(args.output, structure)
     print(f"Plik zostal zapisany jako {output_file}")
 

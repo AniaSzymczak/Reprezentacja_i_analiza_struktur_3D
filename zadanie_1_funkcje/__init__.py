@@ -7,7 +7,7 @@ def structure_load(nazwa_czasteczki):
     nazwa_czasteczki = nazwa_czasteczki.lower()+ ".pdb"
     os.chdir("Struktury")
     parser = PDBParser(QUIET=True)
-    struktura = parser.get_structure("PDB", nazwa_czasteczki)
+    struktura = parser.get_structure(nazwa_czasteczki, nazwa_czasteczki)
     os.chdir("..")
     return struktura
 
