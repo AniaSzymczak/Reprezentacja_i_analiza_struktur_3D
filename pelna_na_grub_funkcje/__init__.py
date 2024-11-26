@@ -26,6 +26,5 @@ class CoarseGrainSelect(Select):
 def convert_to_grub(output_file, structure):
     io = PDBIO()
     io.set_structure(structure)
-
-    # Save the file using the custom selection class
+    os.chdir("Struktury")
     io.save(output_file, select=CoarseGrainSelect())
