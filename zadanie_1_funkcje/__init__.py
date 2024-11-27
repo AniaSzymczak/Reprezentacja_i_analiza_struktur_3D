@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from Bio.PDB import PDBParser
 def structure_load(nazwa_czasteczki):
-    nazwa_czasteczki = nazwa_czasteczki.lower()+ ".pdb"
+    if not nazwa_czasteczki.endswith('.pdb'):
+        nazwa_czasteczki = nazwa_czasteczki.lower() + ".pdb"
     os.chdir("Struktury")
     parser = PDBParser(QUIET=True)
     struktura = parser.get_structure(nazwa_czasteczki, nazwa_czasteczki)

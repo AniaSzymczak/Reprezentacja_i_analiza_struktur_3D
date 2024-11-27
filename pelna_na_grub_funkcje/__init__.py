@@ -18,8 +18,9 @@ class CoarseGrainSelect(Select):
                 return True
 
         # For backbone: P, C4'
-        if atom_name in ["P", "C4'"]:
-            return True
+        if residue_name in ["A", "C", "G" , "U"]:
+            if atom_name in ["P", "C4'"]:
+                return True
 
         return False
 
