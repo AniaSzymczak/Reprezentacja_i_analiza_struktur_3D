@@ -50,4 +50,3 @@ def visualization_contact_map(tablica_ca):
 
 
 
-
